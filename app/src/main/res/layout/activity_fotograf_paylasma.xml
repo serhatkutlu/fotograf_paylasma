@@ -6,4 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".fotograf_paylasma_activity">
 
+    <ImageView
+        android:id="@+id/resim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="50dp"
+        android:onClick="gorsel_sec"
+        app:layout_constraintBottom_toTopOf="@+id/yorum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_crop" />
+
+    <EditText
+        android:id="@+id/yorum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="42dp"
+        android:ems="10"
+        android:hint="Yorumunuzu giriniz"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/paylas_button"
+        app:layout_constraintStart_toStartOf="@+id/resim"
+        app:layout_constraintTop_toBottomOf="@+id/resim" />
+
+    <Button
+        android:id="@+id/paylas_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="188dp"
+        android:onClick="paylas"
+        android:text="Paylaş"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yorum" />
 </androidx.constraintlayout.widget.ConstraintLayout>
