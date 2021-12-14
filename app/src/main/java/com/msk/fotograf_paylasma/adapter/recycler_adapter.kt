@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.msk.fotograf_paylasma.R
 import com.msk.fotograf_paylasma.model.Post
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.recyclerow.view.*
 import java.util.zip.Inflater
 
@@ -24,6 +25,7 @@ class recycler_adapter(val postlist:ArrayList<Post>) : RecyclerView.Adapter<recy
     override fun onBindViewHolder(holder: View_holder, position: Int) {
         holder.itemView.recycler_row_yorum.text=postlist[position].yorum
         holder.itemView.recycler_row_mail.text=postlist.get(position).mail
+        Picasso.get().load(postlist.get(position).uri).into(holder.itemView.recycler_row_image)
     }
 
     override fun getItemCount(): Int {
